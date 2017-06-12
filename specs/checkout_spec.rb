@@ -32,5 +32,14 @@ class TestCheckout < Minitest::Test
      assert_equal(16, @checkout.getBalance(@basket))
    end
 
+   def test_does_over_20_discount_work
+     @basket.add_item(@cheese)
+     @basket.add_item(@cheese)
+     @basket.add_item(@cheese)
+     @basket.add_item(@cheese)
+     @basket.add_item(@cheese)
+     assert_equal(22.5, @checkout.getBalance(@basket))
+   end
+
 
 end

@@ -3,6 +3,8 @@ class Checkout
   def initialize
     @balance = 0
     @bogof_discount = 0
+    @over20_discount = 0
+    @total = 0
   end
 
   def setBogof_discount(discount)
@@ -19,7 +21,12 @@ class Checkout
         @bogof_discount += item.getPrice
       end
     end
+    @total = @balance - (@bogof_discount / 2)
 
-    return @balance - (@bogof_discount / 2)
+    if @total > 20
+      @over20_discount = @total * 0.1
+    end
+    return @total - @over20_discount
   end
+
 end
