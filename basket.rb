@@ -17,4 +17,10 @@ class Basket
     @inBasket.delete(item)
   end
 
+  def empty
+    @inBasket.clear
+  end
+
+
+
 end
