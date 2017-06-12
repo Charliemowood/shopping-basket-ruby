@@ -10,9 +10,4 @@ class TestItem < Minitest::Test
    def test_get_price
      assert(5, @item.getPrice)
    end
-
-
-
-
-
 end
