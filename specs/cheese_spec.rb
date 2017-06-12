@@ -8,6 +8,6 @@ class TestCheese < Minitest::Test
    end
 
    def test_get_price
-     assert(5, @cheese.getPrice)
+     assert_equal(5, @cheese.getPrice)
    end
 end

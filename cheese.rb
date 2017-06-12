@@ -1,5 +1,8 @@
 class Cheese
-  @price = 5
+
+  def initialize
+    @price = 5
+  end
 
   def getPrice
     @price

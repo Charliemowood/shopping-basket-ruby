@@ -8,6 +8,11 @@ class TestBread < Minitest::Test
    end
 
    def test_get_price
-     assert(3, @bread.getPrice)
+     assert_equal(3, @bread.getPrice)
    end
+
+  #  def test_get_bogof_status
+  #    assert_equal(true, @bread.getBogofStatus)
+  #  end
+
 end

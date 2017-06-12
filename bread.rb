@@ -1,5 +1,8 @@
 class Bread
-  @price = 3
+
+  def initialize
+    @price = 3
+  end
 
   def getPrice
     @price
