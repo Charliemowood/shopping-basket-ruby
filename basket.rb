@@ -21,6 +21,10 @@ class Basket
     @inBasket.clear
   end
 
+  def getItemArray
+    @inBasket
+  end
+
 
 
 end
