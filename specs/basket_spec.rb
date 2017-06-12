@@ -1,12 +1,13 @@
 require 'minitest/autorun'
 require_relative '../basket'
-require_relative '../item'
+require_relative '../cheese'
+require_relative '../bread'
 
 class TestItem < Minitest::Test
 
   def setup
-    @item = Item.new
-    @item1 = Item.new
+    @bread = Bread.new
+    @cheese = Cheese.new
     @basket = Basket.new
   end
 
@@ -15,19 +16,19 @@ class TestItem < Minitest::Test
   end
 
   def test_can_add_item_to_basket
-    @basket.add_item(@item)
+    @basket.add_item(@bread)
     assert_equal(1, @basket.item_count)
   end
 
   def test_can_remove_item_from_basket
-    @basket.add_item(@item)
-    @basket.remove_item(@item)
+    @basket.add_item(@cheese)
+    @basket.remove_item(@cheese)
     assert_equal(0, @basket.item_count)
   end
 
   def test_can_empty_basket
-    @basket.add_item(@item)
-    @basket.add_item(@item1)
+    @basket.add_item(@cheese)
+    @basket.add_item(@bread)
     assert_equal([], @basket.empty)
   end
 
