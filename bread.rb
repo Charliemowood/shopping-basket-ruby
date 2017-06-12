@@ -9,6 +9,10 @@ class Bread
     @price
   end
 
+  def setPrice(price)
+    @price = price
+  end
+
   def getBogofStatus
     @bogof
   end

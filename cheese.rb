@@ -13,4 +13,9 @@ class Cheese
     @bogof
   end
 
+  def setPrice(price)
+    @price = price
+  end
+
+
 end

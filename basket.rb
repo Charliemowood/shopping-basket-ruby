@@ -11,6 +11,14 @@ class Basket
 
   def add_item(item)
     @inBasket.push(item)
+    if item.getBogofStatus == true
+      @inBasket.push(item)
+    end
+  end
+
+  def double_item(item)
+    @inBasket.push(item)
+    @inBasket.push(item)
   end
 
   def remove_item(item)
@@ -24,7 +32,5 @@ class Basket
   def getItemArray
     @inBasket
   end
-
-
 
 end

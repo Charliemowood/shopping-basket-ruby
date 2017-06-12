@@ -15,9 +15,10 @@ class TestItem < Minitest::Test
     assert_equal(0, @basket.item_count)
   end
 
+# Bread is part of bogof deal
   def test_can_add_item_to_basket
     @basket.add_item(@bread)
-    assert_equal(1, @basket.item_count)
+    assert_equal(2, @basket.item_count)
   end
 
   def test_can_remove_item_from_basket
@@ -34,6 +35,11 @@ class TestItem < Minitest::Test
 
   def test_can_empty_basket_when_it_starts_empty
     assert_equal([], @basket.empty)
+  end
+
+  def test_can_double_item
+    @basket.double_item(@bread)
+    assert_equal(2, @basket.item_count)
   end
 
 end
